@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border:1px solid black; */
+
+}
+
+:root{
+    --primarycolor:  white ;
+    --secondarycolor: black;
+    --accentcolor:gray;
+    /* background: aqua; */
+    
+}
+
+.container{
+    /* height:700px; */
+    color: var(--primarycolor);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.navbar{
+    margin:10px 200px;
+    padding: 10px 30px;
+    width:800px;
+    height:60px;
+    /* border:1px solid black; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondarycolor);
+    background-color: var(--primarycolor);
+    /* position: fixed; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* to make the navbar look glassy */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1{
+    font-size: 70px;
+    color: blue;
+}
+
+nav{
+    padding:0px 30px;
+    gap: 10px;
+    /* border:1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.note{
+    border:1px solid white; 
+    padding: 50px 50px 50px 50px;
+    color: var(--secondarycolor);
+    bottom: 0px;
+    left: 5px;
+    animation: slide-down 3s ease-in-out, fade-in 4s ease-in;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* animation-name: fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s; 
+    transition: transform 1s; */
+}
+
+.note h2{
+    font-size: 50px;
+    color: blue;
+}
+
+@keyframes fade-in{
+    from{opacity: 0; }
+    to{opacity: 1;}
+}
+
+@keyframes slide-down{
+    from{bottom : 150px;}
+    to{bottom : 0px;}
+}
+
+button{
+    padding: 13px 21px;
+    margin: 0;
+    background-color: #e7e7e7;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: red;
+    color: white;
+    
+}
+
+button a{
+    text-decoration: none;
+}
+
+.background-vid{
+    position: fixed;
+    inset:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: rgba(0,0,0,0.35);
+    z-index: -1; /*pushes the video behind elements*/
+}
+
+footer{
+    border:1px solid white;
+    color: purple;
+    
+}
+
+
