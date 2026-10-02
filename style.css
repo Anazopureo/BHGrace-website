@@ -6,9 +6,9 @@
 }
 
 :root{
-    --primarycolor:  white ;
-    --secondarycolor: black;
-    --accentcolor:gray;
+    --primarycolor:  rgb(38, 38, 171);
+    --secondarycolor: white;
+    --accentcolor:black;
     /* background: aqua; */
     
 }
@@ -19,23 +19,17 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
 }
 
 .navbar{
     margin:10px 100px;
     padding: 10px ;
     width:80%;
-    height:80px;
-    /* border:1px solid black; */
-    border-radius: 20px;
+    height:60px;
+    border-radius:30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--secondarycolor);
-    background-color: var(--primarycolor);
-    /* position: fixed; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* to make the navbar look glassy */
     background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(10px);
@@ -43,37 +37,51 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1{
-    font-size: 70px;
-    color: blue;
+.navbar img{
+    width: 150px;
+    height: 70px;
+    border-radius: 30px;
+    /* border:1px solid black;
+    font-size: 40px;
+    color: var(--primarycolor); */
 }
 
-nav{
+.navbar ul{
     padding:0px 30px;
-    gap: 10px;
-    /* border:1px solid black; */
+    list-style: none;
     display: flex;
-    justify-content: space-around;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--accentcolor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a:hover{
+    color: var(--secondarycolor);
 }
 
 .note{
-    border:1px solid white; 
-    padding: 50px 50px 50px 50px;
+    height: 200px;
+    padding-top: 300px;
     color: var(--secondarycolor);
-    margin-top: 200px;
-    left: 5px;
     animation: fade-in 4s ease-in;
-    color: white;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.6);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-
+    text-align: center;
 }
 
-.note h2{
+/* .note h2{
     font-size: 50px;
     color: blue;
-}
+} */
 
 @keyframes fade-in{
     from{opacity: 0; }
@@ -85,30 +93,6 @@ nav{
     to{bottom : 0px;}
 }
 
-button{
-    border:1px solid black;
-    cursor: pointer;
-    padding: 13px 21px;
-    margin: 0;
-    background-color: #e7e7e7;
-    display: inline-block;
-    /* border: none; */
-    border-radius: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    transition-duration: 0.4s;
-}
-
-button:hover{
-    background-color: red;
-    color: white;
-    
-}
-
-button a{
-    text-decoration: none;
-}
 
 #back-vid{
     position: fixed;
@@ -122,9 +106,40 @@ button a{
     z-index: -1; /*pushes the video behind elements*/
 }
 
+.web-footer{
+    background-color: white;
+    color: var(--accentcolor);
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+
+.web-footer ul{
+    /* border: 3px black solid; */
+    list-style: armenian;
+    width: 300px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+}
+
+#jo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-footer img{
+    width: 50px;
+    height: 50px;
+}
 footer{
-    border:1px solid white;
-    color: rgba(0 ,0, 0, 0.80);
+    padding-top: 10px;
+    background-color: white;    
+    color: black;
     text-align: center;
     
 }
@@ -155,9 +170,6 @@ footer{
         flex-direction: column;
    }
 
-   .note{
-        margin-bottom: 40px;
-   }
     #back-vid{
         position: fixed;
         min-width: 100%;
