@@ -53,6 +53,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+
 }
 
 .navbar a{
@@ -81,7 +82,43 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.navbar a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--accentcolor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.navbar a:hover{
+    color: var(--secondarycolor);
+}
+
+.note{
+    height: 200px;
+    padding-top: 300px;
+    color: var(--secondarycolor);
+    animation: fade-in 4s ease-in;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+/* .note h2{
+    font-size: 50px;
+    color: blue;
+} */
+
+@keyframes fade-in{
+    from{opacity: 0; }
+    to{opacity: 1;}
+}
+
+@keyframes slide-down{
+    from{bottom : 150px;}
+    to{bottom : 0px;}
+}
 
 
 
@@ -109,6 +146,15 @@
     
 }
 
+.web-footer{
+    background-color: white;
+    color: var(--accentcolor);
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+
 .web-footer ul{
     /* border: 3px black solid; */
     list-style: armenian;
@@ -128,6 +174,7 @@
 
 .web-footer img{
     width: 60px;
+    width: 50px;
     height: 50px;
 }
 footer{
