@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border:1px solid black; */
+
+}
+
+:root{
+    --primarycolor:  rgb(38, 38, 171);
+    --secondarycolor: white;
+    --accentcolor:black;
+    /* background: aqua; */
+    
+}
+
+.container{
+    color: var(--primarycolor);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navbar{
+    margin:10px 100px;
+    padding: 10px ;
+    width:80%;
+    height:60px;
+    border-radius:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* to make the navbar look glassy */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+.navbar img{
+    width: 150px;
+    height: 70px;
+    border-radius: 30px;
+    /* border:1px solid black;
+    font-size: 40px;
+    color: var(--primarycolor); */
+}
+
+.navbar ul{
+    padding:0px 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--accentcolor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a:hover{
+    color: var(--secondarycolor);
+}
+
+.note{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/hardset/images/solar_nighttime.jpg);
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: var(--secondarycolor);
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/* For background vid */
+/* #back-vid{
+    position: fixed;
+    /* inset:0; 
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    background: rgba(0,0,0,0.35);
+    z-index: -1; pushes the video behind elements
+}*/
+
+.web-footer{
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    color: var(--accentcolor);
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+
+.web-footer ul{
+    /* border: 3px black solid; */
+    list-style: armenian;
+    width: 300px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+}
+
+#jo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-footer img{
+    width: 60px;
+    height: 50px;
+}
+footer{
+    padding-top: 10px;
+    background-color: white;    
+    color: black;
+    text-align: center;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+   *{
+    box-sizing: border-box;
+   } 
+
+   .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+   }
+
+   #back-vid{
+    min-width: auto;
+    min-height: 100%;
+    z-index : -1;
+   }
+}
+
+@media only screen and (min-width:1200px ){
+    .container{
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+   }
+
+    #back-vid{
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        right: 0;
+        bottom: 0;
+        z-index : -1;
+   }
+}
