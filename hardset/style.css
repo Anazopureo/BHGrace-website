@@ -59,13 +59,13 @@
 .navbar a{
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
-    color: var(--accentcolor);
+    font-size: 17px;
+    color: var(--primarycolor);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar a:hover{
-    color: var(--secondarycolor);
+    color: var(--accentcolor);
 }
 
 .note{
@@ -74,12 +74,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(/hardset/images/solar_nighttime.jpg);
+    /* background: url(/hardset/images/solar_nighttime.jpg);
     background-size: fill;
-    background-repeat: no-repeat;
-    color: var(--secondarycolor);
+    background-repeat: no-repeat; */
     font-size: 50px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(29, 73, 169, 0.6);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -92,17 +91,6 @@
 }
 
 
-.navbar a{
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    color: var(--accentcolor);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.navbar a:hover{
-    color: var(--secondarycolor);
-}
 
 
 
@@ -132,22 +120,23 @@
 }*/
 
 .web-footer{
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    color: var(--accentcolor);
+    /* border: 3px var(--primarycolor) solid; */
+    /* border-radius: 30px; */
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--accentcolor);
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-evenly;  
+    gap: 20px;
+    color : var(--secondarycolor);
     
 }
 
-
-
-.web-footer ul{
-    list-style: armenian;
+.web-footer ul,a{
+    list-style: none;
+    text-decoration: none;
     width: 300px;
-
+    color: white;
 }
 
 #jo{ 
@@ -157,20 +146,28 @@
 }
 
 .web-footer img{
-    width: 60px;
     width: 50px;
     height: 50px;
+    border-radius: 20px;
 }
+
+#bhg_footer{
+    border-right: 1px solid black;
+}
+
+#quick_links{
+     border-right: 1px solid black;
+}
+
 footer{
-    padding-top: 10px;
-    background-color: white;    
-    color: black;
+    padding: 10px 0px;
+    background-color: var(--accentcolor);    
+    color: var(--secondarycolor);
     text-align: center;
-    
 }
 
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
    *{
     box-sizing: border-box;
    } 
@@ -191,7 +188,7 @@ footer{
 @media only screen and (min-width:1200px ){
     .container{
         display: flex;
-        /* align-items: center; */
+        align-items: center;
         flex-direction: column;
    }
 
@@ -203,4 +200,4 @@ footer{
         bottom: 0;
         z-index : -1;
    }
-}
+} */
