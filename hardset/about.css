@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     /* border:1px solid black; */
-    background-color: rgb(190, 223, 236);
 
 }
 
@@ -60,7 +59,7 @@
 .navbar a{
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--accentcolor);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -70,12 +69,12 @@
 }
 
 .navbar a:hover{
-    color: var(--secondarycolor);
+    color: var(--primarycolor);
 }
 
 .header{ 
     height: 300px;
-    background: linear-gradient(to right, rgba(26, 17, 17, 0.5), rgba(73, 11, 11, 0.541)), url("/hardset/images/solar.jpeg");
+    background: linear-gradient(to right, rgba(26, 17, 17, 0.5), rgba(124, 121, 121, 0.541)), url("/hardset/images/solar.jpeg");
     background-size:cover;
     background-position: center;
     display: flex;
@@ -85,6 +84,9 @@
     align-items: center;
     font-size: 1.5em;
     border-radius: 30px;  
+    animation-name: fade-in ;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
 }
 
 .header h1, p, a{
@@ -95,3 +97,57 @@
     text-decoration: none;
     color: var(--secondarycolor);
 }
+
+@keyframes fade-in{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+.web-footer{
+    /* border: 3px var(--primarycolor) solid; */
+    /* border-radius: 30px; */
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--accentcolor);
+    display: flex;
+    justify-content: space-evenly;  
+    gap: 20px;
+    color : var(--secondarycolor);
+    
+}
+
+.web-footer ul,a{
+    list-style: none;
+    text-decoration: none;
+    width: 300px;
+    color: white;
+}
+
+#jo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-footer img{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#bhg_footer{
+    border-right: 1px solid white;
+}
+
+#quick_links{
+     border-right: 1px solid white;
+}
+
+footer{
+    padding: 10px 0px;
+    background-color: var(--accentcolor);    
+    color: var(--secondarycolor);
+    text-align: center;
+}
+
